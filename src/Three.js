@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import './App.css';
-import ThreeEntryPoint from "./threejs/ThreeEntryPoint";
+import styled from 'styled-components';
+import ThreeEntryPoint from "./components./threejs/ThreeEntryPoint";
 
 
 class Threejs extends Component {
