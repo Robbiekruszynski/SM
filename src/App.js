@@ -1,16 +1,17 @@
 
 import './App.css';
 import Three from "./Three"
-import { Switch, Route } from "react-router-dom";
+import { Routes ,Route } from 'react-router-dom';
+
 
 
 
 function App() {
   return (
     <div>
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Three} />
-      </Switch>
+      </Routes>
     </div>
   );
 }
