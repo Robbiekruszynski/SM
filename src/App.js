@@ -4,12 +4,16 @@ import './App.css';
 import { Canvas } from '@react-three/fiber'
 import Box from './components/threejs/Box'
 
+
 export default function App() {
   return (
     <Canvas camera={{ position: [0, 5, 2] }}>
+      {/* <ambientLight/>
+      <pointLight position ={[5,5,5]} intensity={3} /> */}
+      {/* <pointLight position = {[-3,-3,2]}/> */}
       <Box position={[-0.0, 0, 0]} name="1"/>
-      <Box position={[2, 0, 0]} name="2"/>
-      <Box position={[4.3, 0, 0]} name="3"/>
+      {/* <Box position={[2, 0, 0]} name="2"/>
+      <Box position={[4.3, 0, 0]} name="3"/> */}
 
     </Canvas>
   )

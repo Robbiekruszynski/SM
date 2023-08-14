@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 export default function Box(props) {
   const ref = useRef()
@@ -8,6 +8,8 @@ export default function Box(props) {
     ref.current.rotation.x += 1 * delta
     ref.current.rotation.y += 1 * delta
   })
+
+    //you could move an object at a speed of 10 units per second.
 
   return (
     <mesh {...props} ref={ref}
@@ -18,13 +20,14 @@ export default function Box(props) {
       onPointerOver={(e) => console.log('pointer over ' + e.object.name)}
       onPointerOut={(e) => console.log('pointer out ' + e.object.name)}
       onUpdate={(self) => console.log(self)}
+
+      //kind of a cool console log above
     >
       <boxGeometry />
-      <meshBasicMaterial color={0x00ff00} wireframe={true} />
+      <meshBasicMaterial color="purple " wireframe={true} />
     </mesh>
   )
 }
 
 
 
-  //you could move an object at a speed of 10 units per second.
