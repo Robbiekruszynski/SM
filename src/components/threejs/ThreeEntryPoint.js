@@ -1,4 +1,4 @@
-import SceneManager from "../components/threejs/SceneManager";
+import SceneManager from "./SceneManager";
 
 export default (container) => {
   const canvas = createCanvas(document, container);
