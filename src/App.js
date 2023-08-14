@@ -6,7 +6,7 @@ import Box from './components/threejs/Box'
 
 export default function App() {
   return (
-    <Canvas camera={{ position: [0, 0, 2] }}>
+    <Canvas camera={{ position: [0, 0, 2] }} frameloop="demand">
       <Box position={[-0.75, 0, 0]} name="1" />
       <Box position={[0.75, 0, 0]} name="2" />
     

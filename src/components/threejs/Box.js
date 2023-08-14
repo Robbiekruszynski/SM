@@ -4,9 +4,12 @@ export default function Box(props) {
   const ref = useRef()
 
   useEffect(() => {
-    console.log(ref.current)
+    if (ref.current.name === '2') {
+      ref.current.position.y = .5
 
+    }
   })
+
     return (
       <mesh
         {...props} ref={ref}>
