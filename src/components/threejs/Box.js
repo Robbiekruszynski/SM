@@ -1,4 +1,6 @@
 import {useRef, useEffect} from 'react'
+import { useFrame } from '@react-three/fiber'
+
 
 export default function Box(props) {
   const ref = useRef()
@@ -10,6 +12,11 @@ export default function Box(props) {
     }
   })
 
+  useFrame((_, delta) => {
+    ref.current.rotation.x += 1 * delta
+    ref.current.rotation.y += 0.5 * delta
+  })
+
     return (
       <mesh
         {...props} ref={ref}>
@@ -18,3 +25,6 @@ export default function Box(props) {
       </mesh>
     )
   }
+
+
+  //you could move an object at a speed of 10 units per second.
