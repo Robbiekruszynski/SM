@@ -1,28 +1,16 @@
 
 import './App.css';
-import Three from "./Three"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Threejs from "./Three"
+// import Threejs from "./Three"
+import { Canvas } from '@react-three/fiber'
+import Box from './components/Box'
 
-
-
-
-
-
-
-function App() {
+export default function App() {
   return (
-    <div>
-      <p>¯\_(ツ)_/¯</p>
-      {/* <Threejs></Threejs> */}
-      {/* <Router>
-      <Routes>
-        <Route exact path="/" component={Three} />
-      </Routes>
-      </Router> */}
-    </div>
-  );
+    <Canvas camera={{ position: [0, 0, 2] }}>
+      <Box />
+    </Canvas>
+  )
 }
 
-export default App;
 
