@@ -37,11 +37,11 @@ const Bloby = () => {
     <mesh
       ref={mesh}
       position={[0, 0, 0]}
-      scale={2.5}
+      scale={.3}
       onPointerOver={() => (hover.current = true)}
       onPointerOut={() => (hover.current = false)}
     >
-      <icosahedronGeometry args={[1, 40]} />
+      <icosahedronGeometry args={[10, 40]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
