@@ -7,7 +7,6 @@ import vertexShader from './components/threejs/VertexShader';
 import fragmentShader from './components/threejs/FragmentShader';
 
 const Blob = () => {
-  // This reference will give us direct access to the mesh
   const mesh = useRef();
   const hover = useRef(false);
 
@@ -25,7 +24,7 @@ const Blob = () => {
 
   useFrame((state) => {
     const { clock } = state;
-    mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
+    mesh.current.material.uniforms.u_time.value = .69 * clock.getElapsedTime();
 
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
