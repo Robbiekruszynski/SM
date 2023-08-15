@@ -6,7 +6,7 @@ import { MathUtils } from "three";
 import vertexShader from './components/threejs/VertexShader';
 import fragmentShader from './components/threejs/FragmentShader';
 
-const Blob = () => {
+const Bloby = () => {
   const mesh = useRef();
   const hover = useRef(false);
 
@@ -24,12 +24,12 @@ const Blob = () => {
 
   useFrame((state) => {
     const { clock } = state;
-    mesh.current.material.uniforms.u_time.value = .69 * clock.getElapsedTime();
+    mesh.current.material.uniforms.u_time.value = .0069 * clock.getElapsedTime();
 
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
-      hover.current ? 0.85 : 0.15,
-      0.02
+      hover.current ? 1.85 : .5,
+      .2
     );
   });
 
@@ -37,11 +37,11 @@ const Blob = () => {
     <mesh
       ref={mesh}
       position={[0, 0, 0]}
-      scale={1.5}
+      scale={2.5}
       onPointerOver={() => (hover.current = true)}
       onPointerOut={() => (hover.current = false)}
     >
-      <icosahedronGeometry args={[2, 20]} />
+      <icosahedronGeometry args={[1, 40]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
@@ -55,10 +55,11 @@ const Blob = () => {
 const Scene = () => {
   return (
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
-      <Blob />
-      <axesHelper />
+      <Bloby />
+      {/* <axesHelper /> */}
       <OrbitControls />
     </Canvas>
+   
   );
 };
 
