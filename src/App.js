@@ -24,7 +24,7 @@ const Bloby = () => {
 
   useFrame((state) => {
     const { clock } = state;
-    mesh.current.material.uniforms.u_time.value = .0069 * clock.getElapsedTime();
+    mesh.current.material.uniforms.u_time.value = .69 * clock.getElapsedTime();
 
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
