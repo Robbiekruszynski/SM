@@ -1,5 +1,5 @@
 
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import { MathUtils } from "three";
@@ -49,36 +49,24 @@ const Bloby = () => {
         wireframe={true}
       />
     </mesh>
+    
   );
 };
 
 const Scene = () => {
   return (
+   
+
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
       <Bloby />
-      {/* <axesHelper /> */}
       <OrbitControls />
-      
+      <Html>
+  <div><p>test</p></div>
+    </Html>
     </Canvas>
-
+    
   );
 };
 
 export default Scene;
 
-
-//Box ref 
-// import './App.css';
-// import { Canvas } from '@react-three/fiber'
-// import Box from './components/threejs/Box'
-// // import Sphere from './components/threejs/Sphere'
-
-
-
-// export default function App() {
-//   return (
-//     <Canvas camera={{ position: [0, 5, 2] }}>
-//       <Box position={[-0.0, 0, 0]} name="1"/>
-//     </Canvas>
-//   )
-// }
