@@ -58,8 +58,9 @@ const Scene = () => {
       <Bloby />
       {/* <axesHelper /> */}
       <OrbitControls />
+      
     </Canvas>
-   
+
   );
 };
 
