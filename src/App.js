@@ -5,6 +5,11 @@ import { useMemo, useRef } from "react";
 import { MathUtils } from "three";
 import vertexShader from './components/threejs/VertexShader';
 import fragmentShader from './components/threejs/FragmentShader';
+// import { Sound } from './components/sound/Sound';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const Bloby = () => {
   const mesh = useRef();
@@ -61,10 +66,10 @@ const Scene = () => {
       <Bloby />
       <OrbitControls />
       <Html>
-        {/* <div>
-        <button> Link Button </button>
-
-        </div> */}
+      <IconButton aria-label="delete" size="small">
+          <DeleteIcon fontSize="inherit" />
+        </IconButton>
+        
     </Html>
     </Canvas>
     
