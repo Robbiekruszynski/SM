@@ -61,7 +61,10 @@ const Scene = () => {
       <Bloby />
       <OrbitControls />
       <Html>
-  <div><p>test</p></div>
+        {/* <div>
+        <button> Link Button </button>
+
+        </div> */}
     </Html>
     </Canvas>
     
