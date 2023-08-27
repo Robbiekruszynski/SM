@@ -9,7 +9,7 @@ import fragmentShader from './components/threejs/FragmentShader';
 import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
 import IconButton from '@mui/material/IconButton';
-
+import Header from './components/header/Header';
 
 const Bloby = () => {
   const mesh = useRef();
@@ -64,9 +64,11 @@ function play() {
 
 const Scene = () => {
   return (
-   
+
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
-      
+    <Html>
+      <Header/>
+    </Html>
       <Bloby />
       <OrbitControls />
         <Html>
