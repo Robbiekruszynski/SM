@@ -5,12 +5,13 @@ import circle from './assets/images/test_circle.jpeg';
 import { Suspense } from 'react';
 
 function Points() {
+    const imgTexture = userLoader(THREE.TextureLoader, circle);
 return (
     <points>
         <bufferGeometry attach ='geometry'>
 
         </bufferGeometry>
-        <pointsMaterial attach ='material'>
+        <pointsMaterial attach ='material'map={imgTexture} color={0x00AAFF} size={0.5} sizeAttenuation transparent={false} alphaTest={0.5} opacity ={1.0}>
 
         </pointsMaterial>
     </points>
