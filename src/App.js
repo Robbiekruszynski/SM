@@ -64,8 +64,9 @@ function play() {
 const Scene = () => {
   return (
    
-
+//csmera position value 1: 2: 3:distance
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
+      
       <Bloby />
       <OrbitControls />
         <Html>
