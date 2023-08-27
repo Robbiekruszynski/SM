@@ -4,10 +4,6 @@ body {
   overflow-x: hidden;
 }
 
-.animation {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-
-}
-
+.MuiSvgIcon-root{
+color: transparent;
+} 

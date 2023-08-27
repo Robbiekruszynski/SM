@@ -1,16 +1,16 @@
 
+import './App.css';
 import { OrbitControls, Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import { MathUtils } from "three";
 import vertexShader from './components/threejs/VertexShader';
 import fragmentShader from './components/threejs/FragmentShader';
-// import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
-// import Ripple from './components/threejs/Ripple';
-// import {Soundz} from './components/sound/Sound';
+import IconButton from '@mui/material/IconButton';
+
+
 const Bloby = () => {
   const mesh = useRef();
   const hover = useRef(false);
@@ -65,7 +65,6 @@ function play() {
 const Scene = () => {
   return (
    
-//csmera position value 1: 2: 3:distance
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
       
       <Bloby />
