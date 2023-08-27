@@ -9,6 +9,7 @@ import fragmentShader from './components/threejs/FragmentShader';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
+// import Ripple from './components/threejs/Ripple';
 // import {Soundz} from './components/sound/Sound';
 const Bloby = () => {
   const mesh = useRef();
@@ -70,13 +71,14 @@ const Scene = () => {
       <Bloby />
       <OrbitControls />
         <Html>
+
           {/* <Soundz/> */}
           <IconButton onClick={play} aria-label="delete" size="small">
           <DeleteIcon fontSize="inherit" />
           </IconButton>
         </Html>
-    
     </Canvas>
+
     
   );
 };

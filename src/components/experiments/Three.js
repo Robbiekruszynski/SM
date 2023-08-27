@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 // import './App.css';
 import styled from 'styled-components';
-import ThreeEntryPoint from "./components/threejs/ThreeEntryPoint";
+import ThreeEntryPoint from "./ThreeEntryPoint";
 
 
 
