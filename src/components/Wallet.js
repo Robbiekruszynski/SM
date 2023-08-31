@@ -64,7 +64,7 @@ const accountChangeHandler = (account) => {
 return (
 	<div>	
 		<Button onClick={btnhandler} variant="primary">
-			Connect to wallet
+			Wallet
 		</Button>
 	</div>
 );

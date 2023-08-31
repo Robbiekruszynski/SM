@@ -7,3 +7,10 @@ body {
 .MuiSvgIcon-root{
 color: transparent;
 } 
+
+
+body {
+  background-color: white;
+  font-family: Roboto;
+}
+
