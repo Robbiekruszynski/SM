@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import CssBaseline from '@mui/material/CssBaseline';
-
+// import CssBaseline from '@mui/material/CssBaseline';
+import WalletConnect from '../Wallet';
 
 const pages = ['', '', 'Sign in'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -61,6 +61,7 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <WalletConnect/>
             <IconButton
               size="large"
               aria-label="account of current user"
