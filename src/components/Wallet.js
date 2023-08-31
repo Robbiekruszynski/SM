@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import Button from '@mui/material/Button';
+
 // import "./App.css";
 
 
 function WalletConnect() {
+
+ new ethers.BrowserProvider(window.ethereum)
 
 // usetstate for storing and retrieving wallet details
 const [data, setdata] = useState({
@@ -42,7 +45,7 @@ const getbalance = (address) => {
 	.then((balance) => {
 		// Setting balance
 		setdata({
-		Balance: ethers.utils.formatEther(balance),
+		Balance: ethers.formatEther(balance),
 		});
 	});
 };
@@ -63,13 +66,6 @@ return (
 		<Button onClick={btnhandler} variant="primary">
 			Connect to wallet
 		</Button>
-        <Button
-            onClick={() => {
-            alert('clicked');
-                        }}
-                        >
-                    Click me
-                    </Button>
 	</div>
 );
 }

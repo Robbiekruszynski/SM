@@ -10,7 +10,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
 import IconButton from '@mui/material/IconButton';
 import Header from './components/header/Header';
-
+import WalletConnect from "./components/Wallet";
 const Bloby = () => {
   const mesh = useRef();
   const hover = useRef(false);
@@ -67,6 +67,7 @@ const Scene = () => {
 
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
     <Html>
+      <WalletConnect/>
       <Header/>
     </Html>
       <Bloby />
