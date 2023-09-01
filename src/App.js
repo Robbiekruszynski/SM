@@ -9,10 +9,9 @@ import fragmentShader from './components/threejs/FragmentShader';
 import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
 import IconButton from '@mui/material/IconButton';
-import Header from './components/header/Header';
+// import Header from './components/header/Header';
 import Header_two from './components/header/Header_two';
-
-import WalletConnect from "./components/Wallet";
+// import WalletConnect from "./components/Wallet";
 const Bloby = () => {
   const mesh = useRef();
   const hover = useRef(false);

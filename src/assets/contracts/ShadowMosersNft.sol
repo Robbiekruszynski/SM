@@ -12,4 +12,4 @@ contract ShadowMoses is ERC20, ERC20Burnable, Ownable {
         _mint(to, amount);
     }
 }
-//work on 
+//work on
