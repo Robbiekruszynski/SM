@@ -9,8 +9,10 @@ import fragmentShader from './components/threejs/FragmentShader';
 import DeleteIcon from '@mui/icons-material/Delete';
 import crayon from './assets/sounds/crayon.m4a';
 import IconButton from '@mui/material/IconButton';
+import Header from './components/header/Header';
+import Header_two from './components/header/Header_two';
 
-
+import WalletConnect from "./components/Wallet";
 const Bloby = () => {
   const mesh = useRef();
   const hover = useRef(false);
@@ -64,13 +66,15 @@ function play() {
 
 const Scene = () => {
   return (
-   
+
     <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
-      
+    <Html>
+      <Header_two/>
+      {/* <Header/> */}
+    </Html>
       <Bloby />
       <OrbitControls />
         <Html>
-
           {/* <Soundz/> */}
           <IconButton onClick={play} aria-label="delete" size="small">
           <DeleteIcon fontSize="inherit" />
